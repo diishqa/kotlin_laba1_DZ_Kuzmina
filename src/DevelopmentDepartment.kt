@@ -1,10 +1,10 @@
-class DevelopmentDepartment : Department ("разработка") {
+class DevelopmentDepartment : Department ("Razrabotka") {
     override fun printDepartmentGoal() {
-        println("цель отдела: $departmentName: Писать чистый кож")
+        println("cely otdela: $departmentName: Picaty chistiy kod")
     }
 
     override fun generateReport(): String {
-        return "Отдел: $departmentName\nЦель: писать чистный код"
+        return "Otdel: $departmentName\nCelyi: Picaty chistiy kod"
     }
 
 }

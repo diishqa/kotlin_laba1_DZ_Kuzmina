@@ -6,7 +6,7 @@ class Employee(
     var salary: Int=0
         set(value){
             if (value<0){
-                println("ошибка")
+                println("oshibka")
             } else{
                 field=value
             }
@@ -14,7 +14,7 @@ class Employee(
     var yearsOfExperience: Int=0
         set(value) {
             if (value>50){
-                println("слишком много")
+                println("slishkom  mnogo")
             } else{
                 field=value
             }
@@ -22,8 +22,20 @@ class Employee(
         }
     fun getFullName()=fullName
     fun getPosition()=position
+
+    var currentTask: Task? = null
+    fun assingTask(newTask: Task){
+        if (currentTask?.isCompleted==false){
+            println("sotrudnic yzge zanyat: ${currentTask?.title}")
+        }
+        else{
+            currentTask=newTask
+            println("zadacha: ${newTask.title} dlya sotrudnica - $fullName")
+        }
+    }
+
     override fun generateReport(): String {
-        return "ФИО: $fullName\nДолжность: $position\nЗарплата: $salary\nОпыт: $yearsOfExperience"
+        return "FIO: $fullName\nDolzgnosty: $position\nZarplata: $salary\nOpit: $yearsOfExperience"
     }
 
 }
