@@ -35,6 +35,8 @@ data class Task(
     val description: String,
     val priority: Priority,
     var isCompleted: Boolean=false
-){
+){}
+
+abstract class Department(){
 
 }
