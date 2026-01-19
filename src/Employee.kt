@@ -37,6 +37,9 @@ data class Task(
     var isCompleted: Boolean=false
 ){}
 
-abstract class Department(){
+abstract class Department(
+    val departmentName: String
+){
+    abstract fun printDepartmentGoal()
 
 }

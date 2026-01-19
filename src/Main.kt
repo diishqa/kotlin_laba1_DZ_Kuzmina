@@ -25,6 +25,11 @@ fun main() {
     val tCopy=task1.copy()
     println(tCopy)
 
+    val dev=DevelopmentDepartment()
+    val test=TestingDepatment()
+    dev.printDepartmentGoal()
+    test.printDepartmentGoal()
+
 
 }
 
