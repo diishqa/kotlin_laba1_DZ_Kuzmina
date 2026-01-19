@@ -2,7 +2,7 @@ class Employee(
     private var fullName: String,
     private var position: String
 
-) {
+) : ReportGenerator {
     var salary: Int=0
         set(value){
             if (value<0){
@@ -22,6 +22,9 @@ class Employee(
         }
     fun getFullName()=fullName
     fun getPosition()=position
+    override fun generateReport(): String {
+        return "ФИО: $fullName\nДолжность: $position\nЗарплата: $salary\nОпыт: $yearsOfExperience"
+    }
 
 }
 
@@ -39,7 +42,7 @@ data class Task(
 
 abstract class Department(
     val departmentName: String
-){
+) : ReportGenerator {
     abstract fun printDepartmentGoal()
 
 }

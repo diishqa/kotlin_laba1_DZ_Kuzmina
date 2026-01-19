@@ -30,6 +30,10 @@ fun main() {
     dev.printDepartmentGoal()
     test.printDepartmentGoal()
 
+    val reps: List<ReportGenerator> = listOf(employee, dev, test)
+    for (rep in reps){
+        println(rep.generateReport())
+    }
 
 }
 
